@@ -27,16 +27,26 @@ struct JackpotView: View {
                         Text("Obtenez trois chiffres identiques !")
                             .padding()
                             .font(.system(size: 20, weight: .bold))
-                        
-                        TextField("Login", text: $login)
-                            .frame(width: 246, height: 44)
-                            .background(.white)
-                            .textFieldStyle(RoundedBorderTextFieldStyle())
-                        
-                        TextField("Password", text: $password)
-                            .frame(width: 246, height: 44)
-                            .background(.white)
-                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                        HStack{
+                            TextField("?", text: $login)
+                                .frame(width: 50, height: 60)
+                                .background(.white)
+                                .overlay(RoundedRectangle(cornerRadius: 5, style: .continuous).stroke(Color.black, lineWidth: 1))
+                                .multilineTextAlignment(.center)
+                            
+                            TextField("?", text: $password)
+                                .frame(width: 50, height: 60)
+                                .background(.white)
+                                .overlay(RoundedRectangle(cornerRadius: 5, style: .continuous).stroke(Color.black, lineWidth: 1))
+                                .multilineTextAlignment(.center)
+                            
+                            TextField("?", text: $password)
+                                .frame(width: 50, height: 60)
+                                .background(.white)
+                                .overlay(RoundedRectangle(cornerRadius: 5, style: .continuous).stroke(Color.black, lineWidth: 1))
+                                .multilineTextAlignment(.center)
+                        }
+
                         
                         Button {
                             guard login != "" else{

@@ -14,8 +14,11 @@ struct MenuAppsView: View {
                 ScrollView{
                     Text("Menu des applications")
                         .padding()
-                        .goldenFrame()
+                        .foregroundStyle(.white)
+                        //.goldenFrame()
                         .font(.system(size: 25, weight: .bold))
+                        .padding()
+                        .padding(.top, 55)
                     
                     ForEach(availableApps.allCases, id: \.self) { nameApp in
                         IconView(image: nameApp.image, name: nameApp.title)
@@ -29,21 +32,15 @@ struct MenuAppsView: View {
                                     RoundedRectangle(cornerRadius: 10).stroke(Color.black, lineWidth: 1)
                                 }
                                 .clipShape(RoundedRectangle(cornerRadius: 10))
+                                .padding(.bottom, 30)
                         }
                     }
                     
-                    
-                    //                NavigationLink(destination: ContentView()) {
-                    //                    Text("Menu")
-                    //                        .padding()
-                    //                        .background(.blue)
-                    //                        .foregroundStyle(.white)
-                    //
-                    //                }
                 }
                 .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
             }
-            
+            .background(LinearGradient(gradient: Gradient(colors: [.black.opacity(0.85), .gray,]), startPoint: .top, endPoint: .bottom))
+            .edgesIgnoringSafeArea(.all)
         }
     }
 }

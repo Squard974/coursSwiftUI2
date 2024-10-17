@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB91DC5D2CC111C000FF6D7F /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB91DC5C2CC111C000FF6D7F /* ColorExtensions.swift */; };
 		DBBF05482CBFA0250030D333 /* coursSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBF05472CBFA0250030D333 /* coursSwiftUIApp.swift */; };
 		DBBF054A2CBFA0250030D333 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBF05492CBFA0250030D333 /* ContentView.swift */; };
 		DBBF054C2CBFA0260030D333 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBBF054B2CBFA0260030D333 /* Assets.xcassets */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DB91DC5C2CC111C000FF6D7F /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
 		DBBF05442CBFA0240030D333 /* coursSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = coursSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBBF05472CBFA0250030D333 /* coursSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = coursSwiftUIApp.swift; sourceTree = "<group>"; };
 		DBBF05492CBFA0250030D333 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				DBBF05852CBFC9060030D333 /* extension+View.swift */,
 				DBD587892CC0003900D96779 /* MysteryNumberView.swift */,
 				DBD5878B2CC001D200D96779 /* JackpotView.swift */,
+				DB91DC5C2CC111C000FF6D7F /* ColorExtensions.swift */,
 			);
 			path = coursSwiftUI;
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 				DBBF05482CBFA0250030D333 /* coursSwiftUIApp.swift in Sources */,
 				DBD5878C2CC001D200D96779 /* JackpotView.swift in Sources */,
 				DBBF05762CBFA4EF0030D333 /* MainViewModel.swift in Sources */,
+				DB91DC5D2CC111C000FF6D7F /* ColorExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

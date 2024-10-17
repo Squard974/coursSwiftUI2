@@ -39,26 +39,54 @@ struct MysteryNumberView: View {
                             alert = true
                             return
                         }
+                        guard guessInt >= 1 && guessInt <= 100 else {
+                            alert = true
+                            return
+                        }
+                        
                         viewModel.checkGuess(guess: guessInt, expectedNumber: numberToFind)
                     } label: {
                         Text("Confirmer")
                     }
-                    .background(.blue)
+                    
                     .tint(.white)
                     .padding()
+                    .background(.blue)
+                    .font(.system(size: 18, weight: .bold))
+                    .overlay {
+                        RoundedRectangle(cornerRadius: 10).stroke(Color.black, lineWidth: 1)
+                    }
+                    .clipShape(RoundedRectangle(cornerRadius: 10))
                     
-                    Text(viewModel.feedbackMessage)
-                        .padding()
-                        .font(.system(size: 18))
-                        .foregroundColor(.green) // Change la couleur selon ton design
-                
+                    if alert == true {
+                        Text("Entrée incorrecte !")
+                            .padding()
+                            .font(.system(size: 18))
+                            .foregroundColor(.red)
+                            .frame(height: 80)
+                    } else if !viewModel.feedbackMessage.isEmpty {
+                        Text(viewModel.feedbackMessage)
+                            .padding()
+                            .font(.system(size: 18))
+                            .foregroundColor(.blue)
+                            .frame(height: 80)
+                    } else {
+                        Text(" ")
+                            .padding()
+                            .frame(height: 80)
+                    }
+                    
                     
                 }
                 
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .alert(isPresented: $alert){
-                Alert(title: Text("Alerte !"), message: Text("Votre entrée est incorrecte, veuillez entrez un nombre !"))
+                Alert(title: Text("Alerte !"), message: Text("Votre entrée est incorrecte, veuillez entrer un nombre entre 1 et 100 !"))
+            }
+            .onAppear {
+                // Générer un nouveau nombre à chaque fois que la vue apparaît
+                numberToFind = Int.random(in: 1...100)
             }
         }
     }

@@ -34,7 +34,7 @@ class MainViewModel: ObservableObject {
         } else if guess > expectedNumber {
             feedbackMessage = "Trop haut ! Essayez encore."
         } else {
-            feedbackMessage = "Correct ! Vous avez trouvé le nombre."
+            feedbackMessage = "Félicitations !! Vous avez trouvé 🎉 🙌"
         }
     }
     
