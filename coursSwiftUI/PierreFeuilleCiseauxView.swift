@@ -158,6 +158,7 @@ struct PierreFeuilleCiseauxView: View {
                             RoundedRectangle(cornerRadius: 30).stroke(Color.black, lineWidth: 1)
                         }
                     }
+                    .padding(.top, 25)
 
                     if !viewModel.feedbackMessage.isEmpty {
                         Text(viewModel.feedbackMessage)

@@ -18,7 +18,7 @@ struct MenuAppsView: View {
                         //.goldenFrame()
                         .font(.system(size: 25, weight: .bold))
                         .padding()
-                        .padding(.top, 55)
+                        .padding(.top, 75)
                     
                     ForEach(availableApps.allCases, id: \.self) { nameApp in
                         IconView(image: nameApp.image, name: nameApp.title)
