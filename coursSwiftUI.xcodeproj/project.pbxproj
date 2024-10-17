@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DB91DC5D2CC111C000FF6D7F /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB91DC5C2CC111C000FF6D7F /* ColorExtensions.swift */; };
+		DB9933312CC14A3A0028BE93 /* PierreFeuilleCiseauxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9933302CC14A3A0028BE93 /* PierreFeuilleCiseauxView.swift */; };
 		DBBF05482CBFA0250030D333 /* coursSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBF05472CBFA0250030D333 /* coursSwiftUIApp.swift */; };
 		DBBF054A2CBFA0250030D333 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBF05492CBFA0250030D333 /* ContentView.swift */; };
 		DBBF054C2CBFA0260030D333 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBBF054B2CBFA0260030D333 /* Assets.xcassets */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		DB91DC5C2CC111C000FF6D7F /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
+		DB9933302CC14A3A0028BE93 /* PierreFeuilleCiseauxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PierreFeuilleCiseauxView.swift; sourceTree = "<group>"; };
 		DBBF05442CBFA0240030D333 /* coursSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = coursSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBBF05472CBFA0250030D333 /* coursSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = coursSwiftUIApp.swift; sourceTree = "<group>"; };
 		DBBF05492CBFA0250030D333 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				DBD587892CC0003900D96779 /* MysteryNumberView.swift */,
 				DBD5878B2CC001D200D96779 /* JackpotView.swift */,
 				DB91DC5C2CC111C000FF6D7F /* ColorExtensions.swift */,
+				DB9933302CC14A3A0028BE93 /* PierreFeuilleCiseauxView.swift */,
 			);
 			path = coursSwiftUI;
 			sourceTree = "<group>";
@@ -236,6 +239,7 @@
 				DBBF05862CBFC9060030D333 /* extension+View.swift in Sources */,
 				DBBF054A2CBFA0250030D333 /* ContentView.swift in Sources */,
 				DBBF05742CBFA3B30030D333 /* DataController.swift in Sources */,
+				DB9933312CC14A3A0028BE93 /* PierreFeuilleCiseauxView.swift in Sources */,
 				DBBF05842CBFC8E70030D333 /* IconView.swift in Sources */,
 				DBD5878A2CC0003900D96779 /* MysteryNumberView.swift in Sources */,
 				DBBF05482CBFA0250030D333 /* coursSwiftUIApp.swift in Sources */,

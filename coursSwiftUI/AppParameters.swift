@@ -27,7 +27,7 @@ enum availableApps: String{
         case .jackpot:
             return Image("Jackpot")
         case .autre:
-            return Image("Rien")
+            return Image("Rcp")
         }
     }
     
@@ -38,7 +38,7 @@ enum availableApps: String{
         case .jackpot:
             return AnyView(JackpotView())
         case .autre:
-            return AnyView(Text("Aucune vue définie"))
+            return AnyView(PierreFeuilleCiseauxView())
         }
     }
     
@@ -49,7 +49,7 @@ enum availableApps: String{
             case .jackpot:
                 return "Jackpot"
             case .autre:
-                return "Autre"
+                return "Pierre Feuille Ciseaux"
         }
     }
 

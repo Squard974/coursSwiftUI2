@@ -12,7 +12,9 @@ struct MysteryNumberView: View {
     
     @State var guess: String = ""
     @State var alert: Bool = false
-    @State var numberToFind: Int = Int.random(in: 1...100)
+    @State var numberToFind: Int = 0
+    
+    @State var cptEssais: Int = 0
     
     var body: some View {
         NavigationStack {
@@ -21,12 +23,22 @@ struct MysteryNumberView: View {
                 Image("Mystère")
                     .resizable() //autorise la modification de la taille de l'image
                     .frame(width: 200, height: 200)
+                    .cornerRadius(20)
+                    .overlay {
+                        RoundedRectangle(cornerRadius: 10).stroke(Color.black, lineWidth: 1)
+                    }
                 
  
                 VStack {
                     Text("Trouvez le nombre mystère ! (1-100)")
                         .padding()
-                        .font(.system(size: 20, weight: .bold))
+                        .font(.system(size: 25, weight: .bold))
+                        .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                        .multilineTextAlignment(.center)
+                    
+                    Text("Nombre d'essais : \(cptEssais)")
+                        .padding()
+                        .font(.system(size: 15))
                     
                     TextField("Nombre", text: $guess)
                         .frame(width: 110, height: 50)
@@ -45,6 +57,7 @@ struct MysteryNumberView: View {
                         }
                         
                         viewModel.checkGuess(guess: guessInt, expectedNumber: numberToFind)
+                        cptEssais += 1
                     } label: {
                         Text("Confirmer")
                     }
@@ -57,14 +70,9 @@ struct MysteryNumberView: View {
                         RoundedRectangle(cornerRadius: 10).stroke(Color.black, lineWidth: 1)
                     }
                     .clipShape(RoundedRectangle(cornerRadius: 10))
+                    .padding(.top, 25)
                     
-                    if alert == true {
-                        Text("Entrée incorrecte !")
-                            .padding()
-                            .font(.system(size: 18))
-                            .foregroundColor(.red)
-                            .frame(height: 80)
-                    } else if !viewModel.feedbackMessage.isEmpty {
+                    if !viewModel.feedbackMessage.isEmpty {
                         Text(viewModel.feedbackMessage)
                             .padding()
                             .font(.system(size: 18))
@@ -85,7 +93,6 @@ struct MysteryNumberView: View {
                 Alert(title: Text("Alerte !"), message: Text("Votre entrée est incorrecte, veuillez entrer un nombre entre 1 et 100 !"))
             }
             .onAppear {
-                // Générer un nouveau nombre à chaque fois que la vue apparaît
                 numberToFind = Int.random(in: 1...100)
             }
         }

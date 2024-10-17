@@ -38,6 +38,52 @@ class MainViewModel: ObservableObject {
         }
     }
     
+    func jackpot(enableCheat: Bool) -> [Int]{
+        if enableCheat{
+            return [7, 7, 7]
+        } else {
+            return [Int.random(in: 1...9), Int.random(in: 1...9), Int.random(in: 1...9)]
+        }
+        
+    }
+    
+    func playRound(moveJoueur: String, moveAdversaire: String) -> Bool? {
+        
+        if moveJoueur == moveAdversaire {
+            return nil
+        }
+        
+        switch moveJoueur {
+        case "P":
+            return moveAdversaire == "C"
+        case "F":
+            return moveAdversaire == "P"
+        case "C":
+            return moveAdversaire == "F"
+        default:
+            return false
+        }
+    }
+
+    func generateRandomMove() -> String {
+        let moves = ["P", "F", "C"]
+        return moves.randomElement()!
+    }
+    
+    func emojiForMove(move: String) -> String {
+        switch move {
+        case "P":
+            return "🪨"
+        case "F":
+            return "📜"
+        case "C":
+            return "✂️"
+        default:
+            return ""
+        }
+    }
+    
+    
     func additionne(_ a:Int, et b: Int) -> Int {
         return a + b
     }

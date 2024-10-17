@@ -23,7 +23,7 @@ struct IconView: View {
                 .clipShape(RoundedRectangle(cornerRadius: 20))
             
         }
-        .frame(width: 220, height: 240)
+        .frame(width: 230, height: 240)
         .clipShape(RoundedRectangle(cornerRadius: 20))
         .padding()
         .background(Color(hex: "#FFF9F2"))
